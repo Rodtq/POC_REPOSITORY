@@ -1,0 +1,18 @@
+﻿@model POC_REPOSITORY.ViewModels.RoleRegisterViewModel
+<section id="CadastroRole">
+    <h3>Cadastro de Permissões</h3>
+
+    <div>
+        <label for="usr">Permissão:</label>
+        <input id="role" name="Name" type="text" title="Permissão">
+    </div>
+
+    <div>
+        @{if (Model != null)
+            {
+                <p>Última permissão adicionado: @Html.DisplayFor(model => model.Name)</p>
+            }
+        }
+    </div>
+
+</section>

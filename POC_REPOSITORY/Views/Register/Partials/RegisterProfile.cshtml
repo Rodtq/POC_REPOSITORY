@@ -1,0 +1,16 @@
+﻿@model POC_REPOSITORY.ViewModels.ProfileRegisterViewModel
+<section id="CadastroPrfl">
+    <h3>Cadastro de Perfil</h3>
+    <div>
+        <label for="usr">Perfil:</label>
+        <input id="profile" name="Name" type="text" title="Perfil">
+    </div>
+    <div>
+        @{if (Model != null)
+            {
+                <p>Último perfil adicionado: @Html.DisplayFor(model => model.Name)</p>
+            }
+        }
+    </div>
+
+</section>

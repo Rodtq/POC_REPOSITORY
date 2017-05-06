@@ -1,0 +1,18 @@
+﻿@model POC_REPOSITORY.ViewModels.UserRegisterViewModel
+<section id="CadastroUsr">
+    <h3>Cadastro de usuário</h3>
+
+    <div>
+        <label for="usr">Usuário:</label>
+        <input id="usr" name="Name" type="text" title="Usuário">
+    </div>
+
+    <div>
+        @{if (Model != null)
+            {
+                <p>Último usuario adicionado: @Html.DisplayFor(model => model.Name)</p>
+            }
+        }
+    </div>
+
+</section>

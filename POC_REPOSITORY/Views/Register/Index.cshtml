@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "View";
+}
+
+<section>
+    <h2>Cadastro</h2>
+    <div>
+        @using (Ajax.BeginForm("RegisterUser", "Register", new AjaxOptions
+        {
+            InsertionMode = InsertionMode.Replace,
+            UpdateTargetId = "CadastroUsr"
+        }))
+        {
+            @Html.Partial("Partials/RegisterUser")
+        }
+
+
+        @using (Ajax.BeginForm("RegisterProfile", "Register", new AjaxOptions
+        {
+            InsertionMode = InsertionMode.Replace,
+            UpdateTargetId = "CadastroPrfl"
+        }))
+        {
+            @Html.Partial("Partials/RegisterProfile")
+        }
+
+
+        @using (Ajax.BeginForm("RegisterRole", "Register", new AjaxOptions
+        {
+            InsertionMode = InsertionMode.Replace,
+            UpdateTargetId = "CadastroRole"
+        }))
+        {
+            @Html.Partial("Partials/RegisterRole")
+        }
+    </div>
+</section>
